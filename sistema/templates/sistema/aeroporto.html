@@ -1,0 +1,39 @@
+{% extends "sistema/base.html" %}
+
+{% block content %}
+
+<title>Aeroportos | SGTB</title>
+
+<div class="page-header">
+        <h2>Aeroportos
+          <span class="pull-right">
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+          </span>
+        </h2>
+</div>
+
+<table class="table table-striped">
+        <thead class="thead-dark">
+                <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Cidade</th>
+                </tr>
+        </thead>
+      
+        {% for aeroporto in List %}
+        <tbody>
+                <tr>
+                        <th scope="row">{{aeroporto.id}}</th>
+                        <td>{{ aeroporto.nome }}</td>
+                        <td>{{ aeroporto.cidade.nome }}</td>
+                </tr>
+        {% endfor %}
+      </tbody>
+</table>
+
+{% endblock %}

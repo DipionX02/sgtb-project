@@ -1,0 +1,44 @@
+{% extends "sistema/base.html" %}
+
+{% block content %}
+
+<title>Passageiros| SGTB</title>
+
+<div class="page-header">
+        <h2>Passageiros
+          <span class="pull-right">
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+            <a href="{% url 'createpassageiro' %}">
+              <button type="button" class="btn btn-primary">
+                <span class="fa fa-plus"></span> Adicionar
+              </button>
+            </a>
+          </span>
+        </h2>
+</div>
+
+<table class="table table-striped">
+        <thead class="thead-dark">
+                <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                </tr>
+        </thead>
+      
+        {% for passageiro in List %}
+        <tbody>
+                <tr>
+                        <th scope="row">{{passageiro.id}}</th>
+                        <td>{{ passageiro.nome }}</td>
+                        <td>{{ passageiro.email }}</td>
+                </tr>
+        {% endfor %}
+      </tbody>
+</table>
+
+{% endblock %}

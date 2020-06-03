@@ -1,0 +1,28 @@
+{% extends "sistema/base.html" %}
+{% load static %}
+
+{% block content %}
+<title>Home | SGTB</title>
+
+<div class="row justify-content-center mt-5">
+        <div class="col-md-7 text-center">
+
+                 <h1>Segurança e Rastreabilidade da sua bagagem? Só aqui na SGTB!</h1>
+            <p>Quem perde seu tempo perde muito;
+            Quem perde um amigo perde mais;
+            Mas quem perde suas bagagens
+            perde também memórias...<i> -Eric Matheus. Founder and CEO.</i></p>
+               
+        <a role="button" class="btn btn-primary btn-lg" href="{% static 'sistema/Banner.pdf' %}" target="_blank">Descubra</a>
+        </div>
+</div>
+<br>
+        <div class="row justify-content-center">
+              <figure class="figure">
+                <img src="{% static 'sistema/SGTB_RFID.png' %}" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption">SGTB RFID</figcaption>
+              </figure>
+        </div>
+
+
+{% endblock %}

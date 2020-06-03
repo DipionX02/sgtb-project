@@ -1,0 +1,42 @@
+{% extends "sistema/base.html" %}
+
+{% block content %}
+<title>Criar Usuario | SGTB</title>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            <h2>Criar Usuario</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" class="form-control" id="username" aria-describedby="usernameHelp">
+                    <small id="usernameHelp" class="form-text text-muted"> O usuário e o e-mail precisa ser único. Avisaremos se alguém já estiver usando.</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password1">Senha</label>
+                    <input type="password" name="password1" class="form-control" id="password1">
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirme a Senha</label>
+                    <input type="password" name="password2" class="form-control" id="password2">
+                </div>
+                <button type="submit" class="btn btn-primary">Criar Conta</button>
+            </form>
+            <hr>
+        </div>
+    </div>
+{% endblock %}

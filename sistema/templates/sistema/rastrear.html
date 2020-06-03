@@ -1,0 +1,32 @@
+{% extends "sistema/base.html" %}
+
+{% block content %}
+
+<title>Bagagens | SGTB</title>
+
+<div class="page-header">
+        <h2>Minhas Bagagens
+        </h2>
+</div>
+
+<table class="table table-striped">
+        <thead class="thead-dark">
+                <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                </tr>
+        </thead>
+      
+        {% for passageiro in List %}
+        <tbody>
+                <tr>
+                        <th scope="row">{{passageiro.id}}</th>
+                        <td>{{ passageiro.nome }}</td>
+                        <td>{{ passageiro.email }}</td>
+                </tr>
+        {% endfor %}
+      </tbody>
+</table>
+
+{% endblock %}

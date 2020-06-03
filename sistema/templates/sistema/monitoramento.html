@@ -1,0 +1,42 @@
+{% extends "sistema/base.html" %}
+{% load static %}
+
+{% block content %}
+<title>Monitoramento | SGTB</title>
+<div class="row">
+    <div class="col-sm-6">
+      <form action="." method="GET" class="form-inline">
+        <input type="text" id="search" name="search" class="form-control" placeholder="ID VOO">
+        <a type="submit" class="btn btn-light" style="margin-left: 10px;">
+            <img src="{% static 'sistema/icone-busca.png' %}" class="d-inline-block align-top">
+        </a>
+      </form>
+    </div>
+
+    <div class="col-sm-6">
+        <form action="." method="GET" class="form-inline">
+          <input type="text" id="search" name="search" class="form-control" placeholder="ID CLIENTE">
+          <a type="submit" class="btn btn-light" style="margin-left: 10px;">
+              <img src="{% static 'sistema/icone-busca.png' %}" class="d-inline-block align-top">
+          </a>
+        </form>
+      </div>
+
+</div>
+<div class="row justify-content-center mt-5">
+    <div class="col-md-7 text-center">
+        <h2>{% now "j F Y H:i" %}</h2>
+    </div>
+    <div class="col-md-7 text-center">
+        <h2>Monitoramento</h2>
+    </div>    
+</div>
+<br>
+    <div class="row justify-content-center">
+          <figure class="figure">
+            
+            <img src="{% static 'sistema/Monitoramento.png' %}" width="1200" height="700"class="figure-img img-fluid rounded">
+          </figure>
+    </div>
+
+{% endblock %}

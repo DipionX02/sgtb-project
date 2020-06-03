@@ -1,0 +1,36 @@
+{% extends "sistema/base.html" %}
+
+{% block content %}
+
+<title>Checkin | SGTB</title>
+
+<div class="page-header">
+        <h2>Lista de Checkin
+          <span class="pull-right">
+          </span>
+        </h2>
+</div>
+
+<table class="table table-striped">
+        <thead class="thead-dark">
+                <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Aeroporto</th>
+                        <th>Data</th>
+                </tr>
+        </thead>
+      
+        {% for user in List %}
+        <tbody>
+                <tr>
+                        <th scope="row">{{user.id}}</th>
+                        <td>{{ user.passageiro.nome }}</td>
+                        <td>{{ user.aeroporto.nome }}</td>
+                        <td>{{ user.data }}</td>
+                </tr>
+        {% endfor %}
+      </tbody>
+</table>
+
+{% endblock %}
