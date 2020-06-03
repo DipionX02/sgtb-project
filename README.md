@@ -7,20 +7,21 @@
 
 **Projeto Integrado - Sistema Gerenciador de Transportes de Bagagens**
 
-**Autor(s): Douglas Luna - 8911401**
+**Autor(s):**
+* Douglas Luna - 8911401
+* Eric Matheus
+* Daniel Pinheiro
+* Lucas Onaka
 
 **Orientador: MILTON ROBERTO Y GOYA**
 
 **Publico Alvo:**
 * Empresas aéreas
 
-**Metodologias:**
-
-**Desenvolvimento:**
-
 **Tecnologias usadas:**
  * Django
  * Python
  * HTML5
+ * Bootstrap
  * Raspberry Pi
  * RFID
