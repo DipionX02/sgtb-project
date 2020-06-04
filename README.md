@@ -19,9 +19,9 @@
 * Empresas aéreas
 
 **Tecnologias usadas:**
- * Django
  * Python
- * HTML5
- * Bootstrap
- * Raspberry Pi
+ * Django
+ * Postgresql
  * RFID
+ * Raspberry Pi
+
