@@ -8,9 +8,9 @@
 **Projeto Integrado - Sistema Gerenciador de Transportes de Bagagens**
 
 **Autor(s):**
-* Douglas Luna - 8911401
-* Eric Matheus
 * Daniel Pinheiro
+* Douglas Luna
+* Eric Matheus
 * Lucas Onaka
 
 **Orientador: MILTON ROBERTO Y GOYA**
